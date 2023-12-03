@@ -37,12 +37,12 @@ string compress(const string& s) {
     }
 
     return compressed;
-}
+    }
 
-int main() {
-    string str = "aabbcddddd";
-    string compressedStr = compress(str);
-    cout << compressedStr << endl;
+    int main() {
+        string str = "aabbcddddd";
+        string compressedStr = compress(str);
+        cout << compressedStr << endl;
 
     // Bonus 1: Compress further
     string compressedStr2 = compress(compressedStr);
