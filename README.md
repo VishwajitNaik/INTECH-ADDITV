@@ -126,7 +126,7 @@ known)
     }
 
     return s;
-}
+    }
 
     // Function to insert a new node at the end of the linked list
     void insertAtEnd(struct Node** headRef, int newData) {
@@ -426,9 +426,41 @@ information and get back with the understanding.
 # ___ Ans ___
 
 # **Question 6
-Explain a piece of code that you wrote which you are proud of? If you have not written any
-code, please write your favorite subject in engineering studies. We can go deep into that
+Explain a piece of code that you wrote which you are proud of? 
+
+# __Ans__
+
+# Find a way to find the kth to the last element of linked list ( assume length of linked list is not
+known)
+In dsa Linked List, Stack and Binary Tree my fav. topic
+in this question 1st challanging part is kth node position how can I find through last element. I confused.
+But I thinking more and the got the solution 
+
+1] 1st take i = 1 and s1 = s
+Here s and s1 waiting on starting node
+2] uisng while loop s1 goes last node using (s1 -> next != null && i < k) this condition make sure i < k not i <= k
+Here s1 gose last node but s waiting on 1st node it self i = i++ and s1 goes s1-> next
+3] again call another while loop using (s1 -> next != null) this condition 
+Here s1 also goes s1->next and s also goes s-> next 
+
+
+i = 1, s1 = s
+while(s1 -> next != null && i < k){
+i = i +1;
+s1 = s1 -> next;
+}
+while(s1-> next != null){
+s1 = s1 -> next
+s = s-> next 
+}
+return(s);
+
+
+
+If you have not written any code, please write your favorite subject in engineering studies. We can go deep into that
 subject.
+
+my fav subjects are DSA, DBMS and OS
 
 # ___ Ans ___
 
