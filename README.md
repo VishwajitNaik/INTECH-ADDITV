@@ -9,13 +9,13 @@ compression-using-run-length-encoding
 
 ![WhatsApp Image 2023-12-03 at 15 32 15_0d4b1aa7](https://github.com/VishwajitNaik/INTECH-ADDITV/assets/44186372/d134e06d-bb58-447d-bba3-0857a341d49d)
 
-#include <iostream>
-#include <string>
-using namespace std;
-
-string compress(const string& s) {
-    int num = s.length(); // calculating length of the string
-    string compressed;
+    #include <iostream>
+    #include <string>
+    using namespace std;
+    
+    string compress(const string& s) {
+        int num = s.length(); // calculating length of the string
+        string compressed;
 
     int i = 0;
     while (i < num) {
@@ -91,19 +91,19 @@ known)
 # Main Code :
 
 
-#include <stdio.h>
-#include <stdlib.h>
-
-struct Node {
-    int data;
-    struct Node* next;
-};
-
-// Function to find the kth to the last element of a linked list
-struct Node* kthToLast(struct Node* head, int k) {
-    if (head == NULL || k <= 0) {
-        return NULL;
-    }
+     #include <stdio.h>
+     #include <stdlib.h>
+     
+     struct Node {
+         int data;
+         struct Node* next;
+     };
+     
+     // Function to find the kth to the last element of a linked list
+     struct Node* kthToLast(struct Node* head, int k) {
+         if (head == NULL || k <= 0) {
+             return NULL;
+         }
 
     struct Node *s = head, *s1 = head;
     int i = 1;
@@ -128,10 +128,10 @@ struct Node* kthToLast(struct Node* head, int k) {
     return s;
 }
 
-// Function to insert a new node at the end of the linked list
-void insertAtEnd(struct Node** headRef, int newData) {
-    struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
-    struct Node* last = *headRef;
+    // Function to insert a new node at the end of the linked list
+    void insertAtEnd(struct Node** headRef, int newData) {
+        struct Node* newNode = (struct Node*)malloc(sizeof(struct Node));
+        struct Node* last = *headRef;
 
     newNode->data = newData;
     newNode->next = NULL;
@@ -147,20 +147,20 @@ void insertAtEnd(struct Node** headRef, int newData) {
 
     last->next = newNode;
     return;
-}
-
-// Function to print the linked list
-void printList(struct Node* node) {
-    while (node != NULL) {
-        printf("%d ", node->data);
-        node = node->next;
     }
-    printf("\n");
-}
 
-// Driver program to test the functions
-int main() {
-    struct Node* head = NULL;
+    // Function to print the linked list
+    void printList(struct Node* node) {
+        while (node != NULL) {
+            printf("%d ", node->data);
+            node = node->next;
+        }
+        printf("\n");
+    }
+    
+    // Driver program to test the functions
+    int main() {
+        struct Node* head = NULL;
 
     // Insert elements into the linked list
     insertAtEnd(&head, 1);
@@ -182,7 +182,7 @@ int main() {
     }
 
     return 0;
-}
+    }
 
 
 # **Question 3
@@ -205,93 +205,93 @@ Explain one real world use case where stack is better used data structure than a
 # main code
 
 
-#include <stdio.h>
-#include <stdlib.h>
-
-#define N 100 // Size of the stack
-
-// Structure to represent a stack
-struct Stack {
-    int arr[N];
-    int top;
-    int minStack[N];
-    int minTop;
-};
-
-// Function to initialize a stack
-void initialize(struct Stack *stack) {
-    stack->top = -1;
-    stack->minTop = -1;
-}
-
-// Function to push an element onto the stack
-void push(struct Stack *stack, int x) {
-    if (stack->top + 1 == N) {
-        printf("Stack overflow\n");
-        exit(1);
-    } else {
-        stack->top++;
-        stack->arr[stack->top] = x;
-
-        // Update the minimum stack
-        if (stack->minTop == -1 || x <= stack->minStack[stack->minTop]) {
-            stack->minTop++;
-            stack->minStack[stack->minTop] = x;
+    #include <stdio.h>
+    #include <stdlib.h>
+    
+    #define N 100 // Size of the stack
+    
+    // Structure to represent a stack
+    struct Stack {
+        int arr[N];
+        int top;
+        int minStack[N];
+        int minTop;
+    };
+    
+    // Function to initialize a stack
+    void initialize(struct Stack *stack) {
+        stack->top = -1;
+        stack->minTop = -1;
+    }
+    
+    // Function to push an element onto the stack
+    void push(struct Stack *stack, int x) {
+        if (stack->top + 1 == N) {
+            printf("Stack overflow\n");
+            exit(1);
+        } else {
+            stack->top++;
+            stack->arr[stack->top] = x;
+    
+            // Update the minimum stack
+            if (stack->minTop == -1 || x <= stack->minStack[stack->minTop]) {
+                stack->minTop++;
+                stack->minStack[stack->minTop] = x;
+            }
         }
     }
-}
-
-// Function to pop an element from the stack
-int pop(struct Stack *stack) {
-    if (stack->top == -1) {
-        printf("Stack underflow\n");
-        exit(1);
-    } else {
-        int y = stack->arr[stack->top];
-
-        // Update the minimum stack
-        if (y == stack->minStack[stack->minTop]) {
-            stack->minTop--;
+    
+    // Function to pop an element from the stack
+    int pop(struct Stack *stack) {
+        if (stack->top == -1) {
+            printf("Stack underflow\n");
+            exit(1);
+        } else {
+            int y = stack->arr[stack->top];
+    
+            // Update the minimum stack
+            if (y == stack->minStack[stack->minTop]) {
+                stack->minTop--;
+            }
+    
+            stack->top--;
+            return y;
         }
+     }
 
-        stack->top--;
-        return y;
+    // Function to get the minimum element from the stack
+    int getMinimum(struct Stack *stack) {
+        if (stack->minTop == -1) {
+            printf("Stack is empty\n");
+            exit(1);
+        } else {
+            return stack->minStack[stack->minTop];
+        }
     }
-}
 
-// Function to get the minimum element from the stack
-int getMinimum(struct Stack *stack) {
-    if (stack->minTop == -1) {
-        printf("Stack is empty\n");
-        exit(1);
-    } else {
-        return stack->minStack[stack->minTop];
+    int main() {
+        struct Stack stack;
+        initialize(&stack);
+    
+        // Push elements onto the stack
+        push(&stack, 3);
+        push(&stack, 5);
+        push(&stack, 2);
+        push(&stack, 1);
+        push(&stack, 4);
+    
+        // Get the minimum element
+        printf("Minimum element in the stack: %d\n", getMinimum(&stack));
+    
+        // Pop elements from the stack
+        printf("Popped element: %d\n", pop(&stack));
+        printf("Popped element: %d\n", pop(&stack));
+    
+        // Get the minimum element after popping
+        printf("Minimum element in the stack: %d\n", getMinimum(&stack));
+    
+        return 0;
     }
-}
-
-int main() {
-    struct Stack stack;
-    initialize(&stack);
-
-    // Push elements onto the stack
-    push(&stack, 3);
-    push(&stack, 5);
-    push(&stack, 2);
-    push(&stack, 1);
-    push(&stack, 4);
-
-    // Get the minimum element
-    printf("Minimum element in the stack: %d\n", getMinimum(&stack));
-
-    // Pop elements from the stack
-    printf("Popped element: %d\n", pop(&stack));
-    printf("Popped element: %d\n", pop(&stack));
-
-    // Get the minimum element after popping
-    printf("Minimum element in the stack: %d\n", getMinimum(&stack));
-
-    return 0;
-}
 
 
 # Bonus 1 :-
@@ -316,64 +316,64 @@ Example:
 # ___ Ans ___
 
 # Ans : - Code
-#include <stdio.h>
-#include <stdlib.h>
-#include <limits.h>
-
-int min(int a, int b) {
-    return (a < b) ? a : b;
-}
-
-void findOptimalChange(int coins[], int numCoins, int amount) {
-    int dp[amount + 1];
-    int parent[amount + 1];
-
-    dp[0] = 0;
-
-    for (int i = 1; i <= amount; i++) {
-        dp[i] = INT_MAX;
-        parent[i] = -1;
-    }
-
-    for (int i = 0; i < numCoins; i++) {
-        for (int j = coins[i]; j <= amount; j++) {
-            if (dp[j - coins[i]] != INT_MAX && dp[j - coins[i]] + 1 < dp[j]) {
-                dp[j] = dp[j - coins[i]] + 1;
-                parent[j] = i;
-            }
-        }
-    }
-
-    if (dp[amount] == INT_MAX) {
-        printf("No solution exists for the given amount using the provided coins.\n");
-    } else {
-        printf("Optimal change: ");
-        while (amount > 0) {
-            int coin = coins[parent[amount]];
-            printf("%d ", coin);
-            amount -= coin;
-        }
-        printf("\n");
-    }
-}
-
-int main() {
-    int coins[] = {1, 2, 5, 8, 10};
-    int numCoins = sizeof(coins) / sizeof(coins[0]);
-    int amount = 7;
-
-    printf("Available coins: ");
-    for (int i = 0; i < numCoins; i++) {
-        printf("%d ", coins[i]);
-    }
-    printf("\n");
-
-    printf("Change to be given: %d\n", amount);
-
-    findOptimalChange(coins, numCoins, amount);
-
-    return 0;
-}
+     #include <stdio.h>
+     #include <stdlib.h>
+     #include <limits.h>
+     
+     int min(int a, int b) {
+         return (a < b) ? a : b;
+     }
+     
+     void findOptimalChange(int coins[], int numCoins, int amount) {
+         int dp[amount + 1];
+         int parent[amount + 1];
+     
+         dp[0] = 0;
+     
+         for (int i = 1; i <= amount; i++) {
+             dp[i] = INT_MAX;
+             parent[i] = -1;
+         }
+     
+         for (int i = 0; i < numCoins; i++) {
+             for (int j = coins[i]; j <= amount; j++) {
+                 if (dp[j - coins[i]] != INT_MAX && dp[j - coins[i]] + 1 < dp[j]) {
+                     dp[j] = dp[j - coins[i]] + 1;
+                     parent[j] = i;
+                 }
+             }
+         }
+     
+         if (dp[amount] == INT_MAX) {
+             printf("No solution exists for the given amount using the provided coins.\n");
+         } else {
+             printf("Optimal change: ");
+             while (amount > 0) {
+                 int coin = coins[parent[amount]];
+                 printf("%d ", coin);
+                 amount -= coin;
+             }
+             printf("\n");
+         }
+     }
+     
+     int main() {
+         int coins[] = {1, 2, 5, 8, 10};
+         int numCoins = sizeof(coins) / sizeof(coins[0]);
+         int amount = 7;
+     
+         printf("Available coins: ");
+         for (int i = 0; i < numCoins; i++) {
+             printf("%d ", coins[i]);
+         }
+         printf("\n");
+     
+         printf("Change to be given: %d\n", amount);
+     
+         findOptimalChange(coins, numCoins, amount);
+     
+         return 0;
+     }
 
 
 Explain what is a greedy algorithm and how dynamic programming helps in this case.
@@ -381,41 +381,41 @@ Explain what is a greedy algorithm and how dynamic programming helps in this cas
   # Bonus question:
           given a number N, remove one digit and print the largest possible number.
 # __ANS__
-  
-#include <stdio.h>
-#include <string.h>
-
-void removeOneDigit(char number[]) {
-    int n = strlen(number);
-
-    for (int i = 0; i < n - 1; i++) {
-        // If the current digit is smaller than the next digit, remove it
-        if (number[i] < number[i + 1]) {
-            // Move all digits after the removed digit one position left
-            for (int j = i; j < n - 1; j++) {
-                number[j] = number[j + 1];
+      
+    #include <stdio.h>
+    #include <string.h>
+    
+    void removeOneDigit(char number[]) {
+        int n = strlen(number);
+    
+        for (int i = 0; i < n - 1; i++) {
+            // If the current digit is smaller than the next digit, remove it
+            if (number[i] < number[i + 1]) {
+                // Move all digits after the removed digit one position left
+                for (int j = i; j < n - 1; j++) {
+                    number[j] = number[j + 1];
+                }
+                // Set the last digit to null character to shorten the string
+                number[n - 1] = '\0';
+                return;  // Stop after removing one digit
             }
-            // Set the last digit to null character to shorten the string
-            number[n - 1] = '\0';
-            return;  // Stop after removing one digit
         }
+    
+        // If no removal occurred, remove the last digit
+        number[n - 1] = '\0';
     }
-
-    // If no removal occurred, remove the last digit
-    number[n - 1] = '\0';
-}
-
-int main() {
-    char number[] = "9273";
     
-    printf("Original number: %s\n", number);
+    int main() {
+        char number[] = "9273";
+        
+        printf("Original number: %s\n", number);
+        
+        removeOneDigit(number);
+        
+        printf("Largest number after removing one digit: %s\n", number);
     
-    removeOneDigit(number);
-    
-    printf("Largest number after removing one digit: %s\n", number);
-
-    return 0;
-}
+        return 0;
+    }
 
 
 # **Question 5
