@@ -6,7 +6,8 @@ code to implement this is given in the link - https://www.educative.io/answers/s
 compression-using-run-length-encoding
 
 # ___ Ans ___ with bonus 1 and bonus 2
-![7 p](https://github.com/VishwajitNaik/INTECH-ADDITV/assets/44186372/b4ab3539-f81e-40f5-b68f-531ffe43ab11)
+
+![WhatsApp Image 2023-12-03 at 15 32 15_0d4b1aa7](https://github.com/VishwajitNaik/INTECH-ADDITV/assets/44186372/d134e06d-bb58-447d-bba3-0857a341d49d)
 
 #include <iostream>
 #include <string>
@@ -83,17 +84,9 @@ known)
 # ___ Ans ___ with bonus 1
 
 # Psudo code  (logic) : 
-# i = 1, s1 = s
-# while(s1 -> next != null && i < k){
-# i = i +1;
-# s1 = s1 -> next;
-# }
-# while(s1-> next != null){
-# s1 = s1 -> next
-# s = s-> next 
-# }
-# return(s);
-#######################
+![WhatsApp Image 2023-12-03 at 15 32 15_efe03599](https://github.com/VishwajitNaik/INTECH-ADDITV/assets/44186372/7d2dbeea-c166-4a47-98f2-346e5510efec)
+
+
 
 # Main Code :
 
@@ -206,27 +199,8 @@ Explain one real world use case where stack is better used data structure than a
 
 # psudo code : -
 
-# push(x){
-# if(top + 1 == N){
-# pf("stack overflow");
-# exit(1)
-# }
-# else{
-# top++;
-# s[top] = x;
-# }
-# }
-# pop(){
-# if(top == -1){
-# pf("stack underflow")
-# exit()
-# }else{
-# y = s[top]
-# top--
-# return(y)
-# }
+![WhatsApp Image 2023-12-03 at 15 32 15_804c27b8](https://github.com/VishwajitNaik/INTECH-ADDITV/assets/44186372/4506f71f-16a8-418d-80ce-19e84d6fa218)
 
-}
 
 # main code
 
