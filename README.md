@@ -6,6 +6,7 @@ code to implement this is given in the link - https://www.educative.io/answers/s
 compression-using-run-length-encoding
 
 # ___ Ans ___ with bonus 1 and bonus 2
+![7 p](https://github.com/VishwajitNaik/INTECH-ADDITV/assets/44186372/b4ab3539-f81e-40f5-b68f-531ffe43ab11)
 
 #include <iostream>
 #include <string>
