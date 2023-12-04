@@ -320,9 +320,9 @@ You will be given a list coin denominations that you can use to tender change to
 your customers, find the most optimum way to tender the exact change to your
 customers , the optimum is when you use the least number of coins.
 Example:
-# input =&gt; [ 1, 2, 5, 8, 10] (available coins)
-# Input =&gt; 7 (Change to be given)
-# Ans : [ 2, 5 ]
+ input =&gt; [ 1, 2, 5, 8, 10] (available coins)
+ Input =&gt; 7 (Change to be given)
+ Ans : [ 2, 5 ]
 
 # ___ Ans ___
 
@@ -439,6 +439,10 @@ Explain what is a greedy algorithm and how dynamic programming helps in this cas
 What is dot product and cross product? Explain use cases of where dot product is used and
 cross product is used in graphics environment. Add links to places where you studied this
 information and get back with the understanding.
+
+# resource : 
+          https://www.geeksforgeeks.org/dot-and-cross-products-on-vectors/
+          https://www.youtube.com/results?search_query=What+is+dot+product+and+cross+product
 
 # ___ Ans ___
 
