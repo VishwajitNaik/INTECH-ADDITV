@@ -1,4 +1,4 @@
-# INTECH-ADDITV 
+![Capture](https://github.com/VishwajitNaik/INTECH-ADDITV/assets/44186372/d3fcc30e-3194-4a8a-8bb0-3e6d829649a3)# INTECH-ADDITV 
 # **Question 1
  a) String compression
 Implement a method to perform string compression. E.g. ‘aabcccccaaa’ should be a2b1c5a3. The
@@ -6,6 +6,10 @@ code to implement this is given in the link - https://www.educative.io/answers/s
 compression-using-run-length-encoding
 
 # ___ Ans ___ with bonus 1 and bonus 2
+
+# Referance Links :-
+https://www.geeksforgeeks.org/stdstoi-function-in-cpp/
+https://www.geeksforgeeks.org/stdto_string-in-cpp/
 
 ![WhatsApp Image 2023-12-03 at 15 32 15_0d4b1aa7](https://github.com/VishwajitNaik/INTECH-ADDITV/assets/44186372/d134e06d-bb58-447d-bba3-0857a341d49d)
 
@@ -65,14 +69,14 @@ compression-using-run-length-encoding
     cout << decompressedStr << endl;
 
     return 0;
-}
+    }
 
-# /*
+
 Output : -
 
-a2b2cd5
-a2b2cd5
-aabbcddddd
+![4](https://github.com/VishwajitNaik/INTECH-ADDITV/assets/44186372/816d4357-b74c-4cea-8ebd-1a902e4244cc)
+
+
 
 # **Question 2
 Linked List - The link shows a program to find the nth element of a linked list.
@@ -184,6 +188,10 @@ known)
     return 0;
     }
 
+# Output :-
+
+![5](https://github.com/VishwajitNaik/INTECH-ADDITV/assets/44186372/87096945-e039-4ffd-869c-834c0e555154)
+
 
 # **Question 3
 c) Stack minimum- Details of stack data structure is available in
@@ -293,6 +301,9 @@ Explain one real world use case where stack is better used data structure than a
         return 0;
     }
 
+ # Output :-
+![6](https://github.com/VishwajitNaik/INTECH-ADDITV/assets/44186372/05d9f47b-4ed9-4115-8c09-f8f43ae0982e)
+
 
 # Bonus 1 :-
   # 1] Browser(Back button ) : -
@@ -375,6 +386,10 @@ Example:
          return 0;
      }
 
+# Output :-
+![7](https://github.com/VishwajitNaik/INTECH-ADDITV/assets/44186372/d4640fad-0bdc-475e-8c68-1d2c5df41a63)
+
+
 
 Explain what is a greedy algorithm and how dynamic programming helps in this case.
 
@@ -416,6 +431,8 @@ Explain what is a greedy algorithm and how dynamic programming helps in this cas
     
         return 0;
     }
+# Output :-
+![8](https://github.com/VishwajitNaik/INTECH-ADDITV/assets/44186372/0bf2e55f-9e69-4197-a674-da89b03477ba)
 
 
 # **Question 5
@@ -469,3 +486,16 @@ Random crashes – you are given a source code to test and it randomly crashes a
 crashes in the same place ( you have attached a debugger and you find this). Explain what
 all you would suspect and how would you go about with isolating the cause.
 # ___ Ans ___
+
+Yess, exactly that type of problems faces I am also, and that Time I am very frusted and take a time to solve issues.
+mostly I am working on React and node so I give you example regarding this.
+Isolating the cuase following ways : 
+# 1] Chesk Errors in developer Tools : 
+                   what type of errors are occured first I am chek terminal and developer tools because some time npm version missmatch that time also errors comes.
+# 2] OS issue or browser : 
+                   your code is compatible with the operating system and platform it's running on. or check browser specification also
+# 3] review code with friend :
+                   you send code your friend and tell them check code some time your system not support some software and thats why software not installed properly.
+                  
+
+
