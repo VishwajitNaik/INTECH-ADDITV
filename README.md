@@ -1,4 +1,4 @@
-![Capture](https://github.com/VishwajitNaik/INTECH-ADDITV/assets/44186372/d3fcc30e-3194-4a8a-8bb0-3e6d829649a3)# INTECH-ADDITV 
+# INTECH-ADDITV 
 # **Question 1
  a) String compression
 Implement a method to perform string compression. E.g. ‘aabcccccaaa’ should be a2b1c5a3. The
